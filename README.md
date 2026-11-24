@@ -6,12 +6,15 @@ This project uses machine learning and spatial analysis to find out what drives 
 
 ## Key results
 
-- **XGBoost was the best model** for predicting the Price-to-Income ratio: R² = 0.705, RMSE = 7.38, MAE = 3.36 on the test set, against an R² of 0.479 for the Linear Regression baseline.
+- **XGBoost was the best model** for predicting the Price-to-Income ratio: R² = 0.705, RMSE = 7.38, MAE = 3.36 on the test set (mean R² = 0.722 across 10-fold cross-validation), against an R² of 0.479 for the Linear Regression baseline.
 - **Dublin is the least affordable county**: a typical listing costs about 20.6 times average local income, against about 7.1 times in Roscommon.
 - **Three affordability tiers**: K-Means clustering on Price-to-Income and Price-to-Rent ratios splits counties into high, moderate and lower pressure groups.
 - **Floor area and location drive the predictions most**, according to SHAP.
 
 ## Data
+
+The notebook is [`HousingAffordability_FINAL.ipynb`](HousingAffordability_FINAL.ipynb). The raw data files are not included in this repository (the Daft.ie listings contain full property addresses). To rerun it, place `daft_housing_data.csv`, `irish_rent_full.csv` and `disposable_income.csv` in the same folder; the notebook builds `FINAL_CLEAN_DATASET.csv` from them.
+
 
 | Source | What it adds |
 |---|---|
